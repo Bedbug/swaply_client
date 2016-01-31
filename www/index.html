@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!--<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-eval'; object-src 'self'; style-src * 'unsafe-inline'; img-src *; media-src *">-->
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-eval'; object-src 'self'; style-src * 'unsafe-inline'; img-src *; media-src *">
+    <title></title>
+
+
+
+    <!--Giant Bomb API - 298c8fdf2e39f8509df3d6fb34074f1a058e1e0b -->
+    
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+<!-- NG iOS9 Patch-->
+ <script src="lib/ngios9patch/angular-ios9-uiwebview.js"></script>
+
+
+  <!-- Restangular Imports js -->
+  <script src="lib/restangular/dist/restangular.min.js"></script>
+  <script src="lib/ng-lodash/build/ng-lodash.min.js"></script>
+  <script src="lib/lodash/lodash.min.js"></script>
+  
+  <!--lvl Drag-Drop methods-->
+  <!--<script src="lib/lvlDragDrop/lvl-drag-drop.js"></script>
+  <script src="lib/lvlDragDrop/lvl-uuid.js"></script>-->
+  
+  
+    <script src="lib/ngCordova/ng-cordova.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>  
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    
+    
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-clear base-font">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view class="background"></ion-nav-view>
+  </body>
+  
+  
+</html>

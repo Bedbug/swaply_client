@@ -1,0 +1,80 @@
+<ion-view view-title="Dashboard" hide-back-button="true">
+  <ion-nav-buttons side="primary">
+    <button class="button-clear button button-icon ion-person"  ng-click="openProfile()">
+    </button>
+  </ion-nav-buttons>
+  
+  <ion-nav-buttons side="secondary">
+    <button class="button-clear swaply-button" ng-click="openMap()">
+      <img src="./img/grey_logo.svg">
+    </button>
+  </ion-nav-buttons>
+  
+  <div class="bar bar-subheader item-input-inset bar-dark">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search"  placeholder="Search" ng-model="searchFilter">
+      </label>
+    </div>
+    
+  <ion-content class="padding has-subheader">
+    <ion-refresher on-refresh = "doRefresh()"></ion-refresher>  
+   <ion-list>
+      <div class = "swap_item" on-swipe-left = "swipedCard(item, $index)" ng-repeat="item in swap_items | filter: searchFilter">
+         
+          <div class = "header">
+            <div ng-class="item.token == 1 ? 'token-green' : item.token == 2 ? 'token-orange' : 'token-red'" class="token">{{item.token}}</div>
+            <div class = "avatar">
+              <img ng-src="{{item.cover}}">
+              <div class="avatar-info">
+                <h3>Fuad Alli</h3>
+                <p>Athens, Greece</p>
+              </div>
+            </div>
+          </div>
+        <ion-slide-box show-pager = "false" delegate-handle= 'handle' on-slide-changed="slideChanged(item, index)">
+        <ion-slide>
+          <div class = "content">
+            <div class="imgtitle">{{item.game_name}}</div>
+            <div class ="img">
+              <img ng-src="{{item.cover}}">
+            </div>
+            <div class="info">
+              <h3>{{item.game_name}}</h3>
+              <h4>Mildly Used</h4>
+            </div>
+            <div class="distance">
+              <h3>{{item.distance}}</h3>
+            </div>
+            <div class="favorite-heart" ng-show="item.expand"><i class="icon ion-heart"></i></div>
+            <div class="tags">
+              <div ng-repeat ="tag in item.tags" ng-class="tag">{{tag}}</div>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+         
+          <div class = "content" >
+            <div ng-click="expand(item)"  ng-class ="(item.selected? 'on':'off')+ ' '+(item.expand?'expand':'')" class = "options-button">
+              <div><i class="icon ion-heart icon-dark"></i>
+              Shared</div>
+            </div>
+            <div class="info-data">
+             <p> <strong>Bids: </strong>2</p>
+             <p> <strong>XP: </strong> 1000P</p>
+              <p> <strong>Watchlist: </strong>Yes</p>
+              <p><strong>Intuitive comment: </strong>
+            You have 3 Tokens left. You could bid for this game and be done with them. You are obviously interested. What are you waiting for?</p>
+            </div>
+            
+            
+            <button ng-click="" class="button button-outline button-positive ion-social-usd-outline"> Bid</button>
+            <button ng-click="" class="button button-outline button-dark ion-map"> Map</button>
+          </div>
+        <ion-slide>
+         </ion-slide-box>
+      </div>
+    </ion-list>
+    
+  </ion-content>
+</ion-view>

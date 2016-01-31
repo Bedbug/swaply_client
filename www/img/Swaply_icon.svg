@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="180px" height="29px" viewBox="0 0 139 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>S + W + Aply</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-Login" sketch:type="MSArtboardGroup" transform="translate(-141.000000, -109.000000)" font-size="36" font-family="Helvetica" font-weight="bold">
+            <g id="S-+-W-+-Aply" sketch:type="MSLayerGroup" transform="translate(139.000000, 102.000000)">
+                <text id="S" sketch:type="MSTextLayer" transform="translate(13.000000, 21.500000) scale(-1, 1) translate(-13.000000, -21.500000) " fill="#FFFFFF">
+                    <tspan x="0" y="35">S</tspan>
+                </text>
+                <text id="W" sketch:type="MSTextLayer" fill="#0076FF">
+                    <tspan x="19" y="35">W</tspan>
+                </text>
+                <text id="Aply" sketch:type="MSTextLayer" fill="#FFFFFF">
+                    <tspan x="43" y="35">APLY</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
